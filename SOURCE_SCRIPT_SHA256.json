@@ -1,0 +1,9 @@
+{
+  "source_archive_sha256": "cca1db15a2b76011401099aa128e47d87552093d94248d6a4d5c35e16ff06d1b",
+  "source_code_sha256_unmodified": {
+    "multi_country_stageA_replay.py": "8dc204853e9c763457ed42efd60aabbe528670b3f96bbcf4710a4b7cb7688b97",
+    "verify_external_outputs_independent.py": "e9d552f1e17fa7b7caf0de88382abb9949fe78edd48b8423ca5669b4afc6ee33",
+    "build_external_figures.py": "740ee6983f02fede1a3082b27cfc09ad98e9cc50ec1eb85d63ca723cdd534186"
+  },
+  "staging_note": "multi_country_stageA_replay.py docstring has project-private Google Doc URL replaced with neutral protocol text; calculation statements are unchanged"
+}

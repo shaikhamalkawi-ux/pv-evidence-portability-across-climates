@@ -1,0 +1,132 @@
+[
+  {
+    "test": "original 5x5 no-retuning baseline PASS",
+    "pass": true,
+    "details": ""
+  },
+  {
+    "test": "every site six original source orders including local",
+    "pass": true,
+    "details": ""
+  },
+  {
+    "test": "expected output counts",
+    "pass": true,
+    "details": ""
+  },
+  {
+    "test": "every site has 36 original calibration products",
+    "pass": true,
+    "details": ""
+  },
+  {
+    "test": "no unexpected source orders",
+    "pass": true,
+    "details": ""
+  },
+  {
+    "test": "all sources map onto numeric gate PASS",
+    "pass": true,
+    "details": ""
+  },
+  {
+    "test": "supported minimum R3 grid sample count and day count",
+    "pass": true,
+    "details": ""
+  },
+  {
+    "test": "original 27-node interpolated weights sum to 1",
+    "pass": true,
+    "details": ""
+  },
+  {
+    "test": "original bary weights no large negative",
+    "pass": true,
+    "details": ""
+  },
+  {
+    "test": "Brazil exactly 51 parent plant files",
+    "pass": true,
+    "details": ""
+  },
+  {
+    "test": "Brazil exactly 34 eligible parent plant files",
+    "pass": true,
+    "details": ""
+  },
+  {
+    "test": "Brazil exactly 17 held parent plant files",
+    "pass": true,
+    "details": ""
+  },
+  {
+    "test": "Italy three sensor rows and 9 annual sensitivity rows",
+    "pass": true,
+    "details": ""
+  },
+  {
+    "test": "Germany exactly three distinct system-period targets",
+    "pass": true,
+    "details": ""
+  },
+  {
+    "test": "Brazil quarterly sensitivity valid and labeled",
+    "pass": true,
+    "details": ""
+  },
+  {
+    "test": "ALL 900 rows recomputed from independent 32,400 pair-level rows",
+    "pass": true,
+    "details": "[]"
+  },
+  {
+    "test": "three countries 38 primary field trajectories",
+    "pass": true,
+    "details": ""
+  },
+  {
+    "test": "all 34 Brazil full-plant 5-order trials have zero accepted wrong signs",
+    "pass": true,
+    "details": ""
+  },
+  {
+    "test": "Brazil only Eugene 3 unresolved in two sites",
+    "pass": true,
+    "details": ""
+  },
+  {
+    "test": "Germany four wrong accepted same small-margin pair",
+    "pass": true,
+    "details": ""
+  },
+  {
+    "test": "Italy full-period zero wrong accepted",
+    "pass": true,
+    "details": ""
+  },
+  {
+    "test": "all primary target-local references resolve and sign-correct",
+    "pass": true,
+    "details": ""
+  },
+  {
+    "test": "tied minima preserved and all 38 primary targets covered",
+    "pass": true,
+    "details": ""
+  },
+  {
+    "test": "eligible multi-quarter Brazilian sites recorded",
+    "pass": true,
+    "details": ""
+  },
+  {
+    "test": "quarter-level source minima vary in 30 of 31 same plant IDs",
+    "pass": true,
+    "details": ""
+  },
+  {
+    "test": "Brazil has 34 full-site node-weight vectors",
+    "pass": true,
+    "details": ""
+  }
+]

@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "input_locked_source_sha256": "cca1db15a2b76011401099aa128e47d87552093d94248d6a4d5c35e16ff06d1b",
+  "targets": 150,
+  "sequential_pairwise_decisions": 5400,
+  "pair_specific_calibration_products": 7,
+  "calibration_pairs_excluding_held_pair": 21,
+  "baseline_reference_comparison": "target-local heuristic",
+  "stop_depth_exact_matches": 5400,
+  "unresolved_flag_exact_matches": 5400,
+  "wrong_accepted_flag_exact_matches": 5400,
+  "held_pair_full_contrast_used_to_stop": false,
+  "held_pair_full_contrast_used_afterward_to_label_errors": true,
+  "physical_experiment": false,
+  "lab_time_or_uncertainty_validated": false,
+  "note": "Leave-two-products-out calibration rotates with each evaluated pair. 150 targets and 5400 paired replay records share the same 9-product response panel and are NOT independent physical site experiments."
+}

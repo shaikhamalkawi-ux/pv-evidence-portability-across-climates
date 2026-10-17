@@ -1,0 +1,32 @@
+site,eligible_quarters,a_common_best_source_exists_all_quarters,intersection_best_orders,per_quarter_best_sets
+D09_PS_001,5,False,,2024Q2=Switzerland ; 2024Q3=Switzerland ; 2024Q4=Golden ; 2025Q1=Golden ; 2025Q2=Switzerland
+D09_PS_002,5,False,,2024Q2=Switzerland ; 2024Q3=Albuquerque ; 2024Q4=Albuquerque|Golden ; 2025Q1=Golden ; 2025Q2=Cocoa
+D09_PS_003,5,False,,2024Q2=Switzerland ; 2024Q3=Albuquerque ; 2024Q4=Golden ; 2025Q1=Albuquerque|Golden ; 2025Q2=Cocoa
+D09_PS_004,5,False,,2024Q2=Switzerland ; 2024Q3=Switzerland ; 2024Q4=Golden ; 2025Q1=Golden ; 2025Q2=Cocoa
+D09_PS_005,5,False,,2024Q2=Eugene ; 2024Q3=Switzerland ; 2024Q4=Golden ; 2025Q1=Golden ; 2025Q2=Switzerland
+D09_PS_006,4,False,,2024Q3=Switzerland ; 2024Q4=Golden ; 2025Q1=Golden ; 2025Q2=Eugene
+D09_PS_007,5,False,,2024Q2=Switzerland ; 2024Q3=Switzerland ; 2024Q4=Golden ; 2025Q1=Golden ; 2025Q2=Albuquerque
+D09_PS_008,5,False,,2024Q2=Switzerland ; 2024Q3=Switzerland ; 2024Q4=Golden ; 2025Q1=Golden ; 2025Q2=Switzerland
+D09_PS_009,4,False,,2024Q3=Switzerland ; 2024Q4=Golden ; 2025Q1=Golden ; 2025Q2=Switzerland
+D09_PS_010,3,False,,2024Q4=Golden ; 2025Q1=Golden ; 2025Q2=Switzerland
+D09_PS_011,4,False,,2024Q3=Switzerland ; 2024Q4=Cocoa ; 2025Q1=Golden ; 2025Q2=Switzerland
+D09_PS_012,3,False,,2024Q4=Golden ; 2025Q1=Golden ; 2025Q2=Albuquerque|Switzerland
+D09_PS_013,3,False,,2024Q4=Golden ; 2025Q1=Golden ; 2025Q2=Switzerland
+D09_PS_015,3,False,,2024Q3=Switzerland ; 2024Q4=Golden ; 2025Q2=Cocoa
+D09_PS_028,3,False,,2024Q4=Cocoa|Golden ; 2025Q1=Golden ; 2025Q2=Switzerland
+D09_PS_033,3,False,,2024Q4=Golden ; 2025Q1=Golden ; 2025Q2=Switzerland
+D09_PS_034,3,False,,2024Q4=Golden ; 2025Q1=Golden ; 2025Q2=Switzerland
+D09_PS_035,3,False,,2024Q4=Golden ; 2025Q1=Golden ; 2025Q2=Albuquerque
+D09_PS_036,2,False,,2025Q1=Golden ; 2025Q2=Albuquerque
+D09_PS_037,2,False,,2025Q1=Golden ; 2025Q2=Cocoa
+D09_PS_038,3,False,,2024Q4=Golden ; 2025Q1=Golden ; 2025Q2=Albuquerque
+D09_PS_039,2,False,,2025Q1=Golden ; 2025Q2=Switzerland
+D09_PS_041,2,True,Eugene,2025Q1=Eugene ; 2025Q2=Eugene
+D09_PS_042,2,False,,2025Q1=Golden ; 2025Q2=Switzerland
+D09_PS_043,2,False,,2025Q1=Golden ; 2025Q2=Albuquerque
+D09_PS_044,2,False,,2025Q1=Golden ; 2025Q2=Switzerland
+D09_PS_045,2,False,,2025Q1=Golden ; 2025Q2=Switzerland
+D09_PS_046,2,False,,2025Q1=Golden ; 2025Q2=Switzerland
+D09_PS_047,2,False,,2025Q1=Golden ; 2025Q2=Switzerland
+D09_PS_049,2,False,,2025Q1=Golden ; 2025Q2=Albuquerque|Switzerland
+D09_PS_050,2,False,,2025Q1=Golden ; 2025Q2=Albuquerque

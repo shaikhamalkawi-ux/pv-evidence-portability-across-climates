@@ -1,0 +1,16 @@
+# Ephemeral build/cache and local raw producer inputs
+__pycache__/
+*.pyc
+.pytest_cache/
+.DS_Store
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*token*.txt
+raw_inputs/
+source_archives/
+*.log
+*.aux
+*.synctex.gz

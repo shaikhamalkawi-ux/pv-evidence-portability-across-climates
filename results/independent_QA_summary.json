@@ -1,0 +1,32 @@
+{
+  "baseline_25_of_25_exact": true,
+  "independent_qa_pass": 26,
+  "independent_qa_total": 26,
+  "Germany_periods": 3,
+  "Italy_independent_sites": 1,
+  "Italy_repeated_temp_sensors": 3,
+  "Italy_annual_sensitivity_windows": 9,
+  "Brazil_source_file_count": 51,
+  "Brazil_primary_eligible_plants": 34,
+  "Brazil_primary_held_plants": 17,
+  "Brazil_quarter_sensitivity_eligible": 101,
+  "Brazil_multi_quarter_plant_count": 31,
+  "Brazil_plants_without_common_quarter_best_order": 30,
+  "Brazil_34_site_weight_nearest_total_variation": 0.004375117314715538,
+  "Brazil_34_site_weight_nearest_ids": [
+    "D09_PS_002",
+    "D09_PS_003"
+  ],
+  "primary_external_old_orders_n": 190,
+  "primary_external_wrong_accepted_count": 4,
+  "primary_external_unresolved_count": 3,
+  "full_period_Brazil_wrong_accepted": 0,
+  "full_period_Brazil_unresolved": 3,
+  "full_period_Germany_wrong_accepted": 4,
+  "full_period_Italy_wrong_accepted": 0,
+  "quarter_wrong_accepted_old_orders": 9,
+  "quarter_unresolved_old_orders": 15,
+  "yearly_Italy_wrong_accepted_old_orders": 3,
+  "nonindependence_warning": "34 Brazil plant files are clustered observational traces, not 34 independent climate zones; a particularly close node-weight pair has TV distance as recorded; no statistical sampling confidence interval inferred",
+  "claim_state": "Finite conditional field operating-state robustness. R3 response products are not measured at new field sites."
+}

@@ -1,0 +1,41 @@
+{
+  "archive_sha256": "cca1db15a2b76011401099aa128e47d87552093d94248d6a4d5c35e16ff06d1b",
+  "primary_hist_runs": 190,
+  "complete": 188,
+  "meanbetter": 79,
+  "meanbetter_both_worse": 21,
+  "meanbetter_prefixworse_modsame": 7,
+  "meanbetter_modworse_prefixsame": 2,
+  "weights": {
+    "0": {
+      "model_more": 40,
+      "model_tie": 15,
+      "model_less": 24
+    },
+    "0.01": {
+      "model_more": 42,
+      "model_tie": 0,
+      "model_less": 37
+    },
+    "0.1": {
+      "model_more": 41,
+      "model_tie": 0,
+      "model_less": 38
+    },
+    "1": {
+      "model_more": 35,
+      "model_tie": 2,
+      "model_less": 42
+    },
+    "10": {
+      "model_more": 33,
+      "model_tie": 0,
+      "model_less": 46
+    },
+    "100": {
+      "model_more": 33,
+      "model_tie": 0,
+      "model_less": 46
+    }
+  }
+}
