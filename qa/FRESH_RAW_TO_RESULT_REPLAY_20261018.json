@@ -1,0 +1,39 @@
+{
+  "date": "2026-10-18",
+  "purpose": "Fresh same-code Stage-A raw-to-result replay verification; not an independent new algorithm and not a new scientific result",
+  "original_stageA_script_sha256_verified": true,
+  "germany_italy_brazil_source_sha256_gates_passed": 6,
+  "switzerland_source_zip_crc_passed": true,
+  "brazil_source_zip_crc_passed": true,
+  "albuquerque_source_identity_checked_by_replay_script": true,
+  "original_five_environment_baseline_cells_reproduced": "25/25",
+  "regenerated_outputs": {
+    "country_source_support_gates.csv": {
+      "rows": 230,
+      "sha256": "6268319826301be19d8cd1ccf2d0ee2ccd6b1a08f0c6089a87d740563b22edc3",
+      "byte_identical_to_frozen_R4": true
+    },
+    "original_grid_27_node_site_weights.csv": {
+      "rows": 150,
+      "sha256": "afe6aeb991d6706ba4beae3b1799daab1f33eb715b767259de2d74d1a1755662",
+      "byte_identical_to_frozen_R4": true
+    },
+    "external_source_order_replay.csv": {
+      "rows": 900,
+      "sha256": "d82e48e394040c21b2adde63356ea6c489425eacf76628a56ccbb6fc90245f9f",
+      "byte_identical_to_frozen_R4": true
+    },
+    "external_pairlevel_decisions.csv": {
+      "rows": 32400,
+      "sha256": "d742769b8874dceb63b8aef7bf00b712097d1d598beb0588b0d706c7278f4c68",
+      "byte_identical_to_frozen_R4": true
+    }
+  },
+  "independent_output_checks": "26/26 PASS",
+  "claim_boundary": [
+    "No producer raw data are redistributed in this public repository",
+    "This is a same-code replay, not an independent algorithmic replication",
+    "No calibrated measurement-uncertainty certificate is created",
+    "No measured laboratory-time saving is inferred"
+  ]
+}
