@@ -4,20 +4,20 @@
 
 *Directional Portability of PV Characterization Sequences: Measurement Burden and Shortlist Exclusion Across Climates*
 
-**Repository maintainer and GitHub code-archive contact: Ghassan Malkawi** (sole maintainer). This public code and derived-results companion corresponds to Global Solar **Project 66, scientific R4** (author-identified manuscript prepared 18 October 2026). Journal-manuscript authorship is recorded in the paper separately; GitHub repository maintainer credit must not be substituted for the paper byline. No final journal DOI exists; this repository is **not** evidence of journal acceptance.
+**Repository maintainer and GitHub code-archive contact: Ghassan Malkawi** (sole maintainer). Journal-manuscript authorship is recorded in the paper separately; repository maintenance is not the manuscript byline. No final journal DOI exists, and this repository is not evidence of journal acceptance.
 
 ## What does this repository test?
 
-We examine two **different** PV evidence-transfer operations, without conflating them:
+The manuscript evaluates two different evidence-transfer operations:
 
-- **Stage A — characterization sequence transfer:** does a measurement test-condition order derived for one climate lead to additional or fewer irradiance–temperature test cells when applied to another climate's observed operating-state distribution? The supplied derived output tables cover the original five-site evidence and separately admitted field-state replays in Germany, Italy and Brazil. The Safi Morocco raw-synchronization audit remains a separately reported conditioning case. The nine original response-panel products were **not measured** at these external sites.
-- **Stage B — shortlist transfer:** does a source-climate candidate shortlist exclude exact physical modules that remain target relevant? The included small self-contained script reproduces the published 11-unit Cocoa/Eugene q=5% case. The independent Oslo/Tozeur/Sevilla matched-configuration field results are cited in the manuscript but require the original producer archive for independent raw reconstruction.
+- **Stage A — characterization-sequence transfer:** whether a fixed measurement-condition order derived for one climate changes the number of irradiance-temperature test cells needed when applied to another climate's observed operating-state distribution.
+- **Stage B — shortlist transfer:** whether a source-climate candidate shortlist removes exact physical modules or matched configurations that remain target relevant.
 
-**The core engineering result is conditional**: A low mean pairwise stopping depth does not necessarily lower full-campaign burden. Neither the computational stopping rule nor the workload proxies are measured test duration, measurement uncertainty or IEC compliance certificates.
+The central engineering result is conditional: a lower mean pairwise stopping depth does not necessarily reduce full-campaign workload, and a stable winner does not guarantee shortlist safety. The endpoints are decision-stage-specific and direction-specific.
 
-## Verify outputs without downloading raw producer archives
+## Reproducibility routes
 
-Python 3 with `numpy` and `pandas` is needed for Stage A. Stage B's small exact-unit check uses standard-library Python.
+### 1. Quick reviewer checks from included derived records
 
 ```bash
 python -m pip install -r requirements-verify.txt
@@ -25,38 +25,55 @@ bash verify_derived_only.sh
 python stageB_derived_audit/reproduce/verify_shortlists.py
 ```
 
-Expected: **26/26** independently reconstructed frozen Stage-A output checks PASS; Stage-B **3/5** target-relevant units excluded by source, 10 forward nonempty exclusion intervals. In the source archive, Stage-A campaign workload cross-checks are **188/188** and the pair-specific information-flow replayer is **5,400/5,400** exact matches; these two deeper tests require the original SHA-locked author-controlled archive. Do not portray the field target records as independent experiments or confidence samples.
+Expected: **26/26** Stage-A derived-output checks PASS; Stage B reproduces the 11-unit Cocoa/Eugene 5% shortlist result with **3/5** target-relevant units falsely excluded and 10 nonempty forward false-exclusion intervals.
 
-## Structure
+### 2. Original Stage-A computational implementation
 
-| Path | Description |
-|---|---|
-| `code/` | Frozen Stage-A multicountry replay, derived-output verifier and figure builder |
-| `results/` | Derived Stage-A decision, support and summary tables (not producer logger measurements) |
-| `stageA_derived_audit/` | Campaign proxy recomputation and pair-specific shadow-mode verification |
-| `stageB_derived_audit/` | Auditable 11-unit Cocoa–Eugene final-yield shortlist calculation |
-| `derived_inputs/` | Small Safi conditional diagnostic (not a new field site) |
-| `qa/` | Independent output verification ledger |
-| `SOURCE_SCRIPT_SHA256.json` | Frozen source hashes; source R4 master requires separate local access |
-| `THIRD_PARTY_DATA.md` | Official producer citations, provenance and rights guardrails |
-| `SCOPE_AND_RESULTS.md` | Claim boundaries; differences between computed and physical observations |
+The recovered original Stage-A source is now public under:
 
-## Full retrospective replay (optional, requires frozen historical archive)
+`code/stageA_original/`
 
-The current repo does **not** redistribute the entire original `Project62_R4_Multicountry_Reproducibility.zip` or any raw third-party logger datasets. The exact historical archive SHA-256 is:
+It contains the byte-verified source programs:
+
+- `reproduce_characterization_depth.py` — reconstructs the original Stage-A characterization-depth analysis from the response matrix and U.S. mPERT inputs.
+- `directional_transfer_5site.py` — constructs the complete directed five-environment matrix after adding the public Switzerland and Albuquerque inputs.
+- `verify_r12.py` — verifies the locked five-site result conditions.
+- `SWITZERLAND_REQUIRED_FILES.csv` — filenames, row counts and SHA-256 identities for the 12 monthly Task-13 inputs.
+- `environment.txt` — recorded software environment.
+
+See `code/stageA_original/README.md` for exact input layout, commands and source hashes.
+
+The computational implementation is therefore public. A fresh raw-to-result replay still requires the original third-party data files from their producers; this repository intentionally does not redistribute those raw bytes.
+
+### 3. Deeper frozen-archive audits
+
+The preserved R4 archive additionally passed **188/188** full-campaign workload checks and **5,400/5,400** pair-specific sequential-information checks. Those deeper checks use the SHA-locked author-controlled archive:
 
 `cca1db15a2b76011401099aa128e47d87552093d94248d6a4d5c35e16ff06d1b`
 
-If this exact authorized archive is already available locally, run:
+If an authorized copy of that exact archive is available locally:
 
 ```bash
 bash stageA_derived_audit/verify_all.sh /absolute/path/to/Project62_R4_Multicountry_Reproducibility.zip
 ```
 
-That reproduces the engineering counts and Stage-A information-flow audit without tuning or altering baseline results. Before repeating any raw source acquisition, obtain the publisher source releases at the original DOIs and honor source licences and citation requirements.
+## Structure
+
+| Path | Description |
+|---|---|
+| `code/stageA_original/` | Recovered original Stage-A raw-to-result source programs and input manifests |
+| `code/` | Frozen multicountry Stage-A replay, derived-output verifier and figure builder |
+| `results/` | Derived Stage-A decision, support and summary tables |
+| `stageA_derived_audit/` | Full-campaign proxy recomputation and pair-specific shadow-mode verification |
+| `stageB_derived_audit/` | Auditable 11-unit Cocoa-Eugene shortlist calculation |
+| `derived_inputs/` | Small Safi conditional diagnostic |
+| `qa/` | Independent output verification ledger |
+| `SOURCE_SCRIPT_SHA256.json` | Source-code identities |
+| `THIRD_PARTY_DATA.md` | Producer citations, provenance and rights guardrails |
+| `SCOPE_AND_RESULTS.md` | Claim boundaries |
 
 ## Data rights and scientific limitations
 
-This repository contains **code and compact derived data only**. It does not host NREL, Sandia, IEA, Zenodo, Mendeley or other producer logger datasets; see `THIRD_PARTY_DATA.md`. Check the source licence and attribution before redistributing derivative tables. Public accessibility does not constitute an open-source licence: unless a later explicit licence is added, code reuse requires the rights holder's permission.
+No original NREL, Sandia, IEA, Zenodo, Mendeley or other producer logger data are redistributed here. Obtain them from the cited sources and comply with their licences. The field records provide operating-state distributions; they are not new field measurements of the nine response-panel products.
 
-No unobserved field performance, laboratory-time savings, probabilistic error rate, source-product causal mechanism, or universal shortlisting safety is claimed. The paired source–target diagnostics are direction-specific and stage-specific, not universal product procurement recommendations.
+The empirical stopping envelope is not a calibrated measurement-uncertainty budget, the workload proxies are not measured laboratory time, and no universal safe sequence, error probability or procurement rule is claimed.
