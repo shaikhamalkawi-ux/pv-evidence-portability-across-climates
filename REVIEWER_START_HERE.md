@@ -1,16 +1,35 @@
-# Reviewer quick-start — public code and derived results
+# Reviewer quick-start
 
-**GitHub archive steward: Ghassan Malkawi.** This is a data/code companion for the journal manuscript *Directional Portability of PV Characterization Sequences: Measurement Burden and Shortlist Exclusion Across Climates*. The official manuscript author list is independent from this GitHub archive-steward role.
+This repository accompanies the manuscript *Directional Portability of PV Characterization Sequences: Measurement Burden and Shortlist Exclusion Across Climates*.
 
-The current derived-data scripts can be audited without privileged access or downloading producer raw logger records. From a fresh checkout:
+Two verification routes are available.
+
+## Fast check from included derived records
 
 ```bash
 python -m pip install -r requirements-verify.txt
 bash run_checks.sh
+python stageB_derived_audit/reproduce/verify_shortlists.py
 ```
 
-Expected: original Stage-A derived-output verification **26/26 PASS**; exact physical-unit Stage-B source/target shortlist: Cocoa 2 retained, Eugene 5 retained, 3 false exclusions at q=5%, 40% target-set coverage and 10 nonempty forward exclusion intervals. The larger R4 scientific archive (not redistributed here) is needed for the separate 188/188 campaign-cost and 5,400/5,400 sequential shadow-mode checks; see README and SOURCE_SCRIPT_SHA256.json for provenance.
+Expected: Stage-A derived-output verification **26/26 PASS**; Stage-B exact-unit Cocoa/Eugene check reproduces 2 source-retained units, 5 Eugene-relevant units, 3 false exclusions at q=5%, 40% target-set coverage and 10 nonempty forward intervals.
 
-**What is not available here:** large raw third-party logger data, an author-identified journal manuscript PDF, a certified measurement uncertainty budget, measured laboratory-time savings, or a universal procurement claim. Sources are cited under THIRD_PARTY_DATA.md; get original raw files from the cited producers under their terms.
+## Inspect or replay the original Stage-A algorithm
 
-Repository is public for peer review; no license to modify/redistribute this project's code is granted until a separate explicit license is published. GitHub accessibility does not replace source attribution or rights verification.
+The recovered original Stage-A source programs are public in `code/stageA_original/`.
+
+Start with:
+
+`code/stageA_original/README.md`
+
+The public directory contains the exact five-environment replay code, core characterization-depth code, locked-result verifier, Switzerland input manifest and recorded environment. A full raw-to-result execution requires reacquiring the original third-party inputs from the producer repositories listed in `THIRD_PARTY_DATA.md`; raw producer files are not re-hosted here.
+
+The distinction is deliberate: **the analysis code is public; third-party raw data redistribution is not implied.**
+
+## Deeper archive checks
+
+The separately preserved SHA-locked R4 archive previously passed **188/188** full-campaign workload checks and **5,400/5,400** sequential-information checks. These are computational verification counts, not independent physical experiments or metrological trials.
+
+## Claim boundaries
+
+This repository does not provide a certified measurement-uncertainty budget, measured laboratory-time savings, a universal characterization subset or a universal procurement rule. Stage A concerns source-sequence/target-support transport; Stage B concerns shortlist exclusion. Keep those endpoints separate.
