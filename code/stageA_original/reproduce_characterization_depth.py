@@ -134,7 +134,7 @@ keys=[('Cocoa','Eugene'),('Cocoa','Golden'),('Eugene','Cocoa'),('Eugene','Golden
 data=[]; labs=[]
 for src,tgt in keys:
     v=pairdf.query('source_order==@src and target_climate==@tgt').extra_cells_vs_target_native.to_numpy()
-    data.append(v); labs.append(f'{src}â{tgt}')
+    data.append(v); labs.append(f'{src}→{tgt}')
 ax.boxplot(data,tick_labels=labs,showmeans=True)
 ax.axhline(0,ls='--',lw=1)
 ax.set_ylabel('Extra IEC cells vs target-conditioned heuristic')
