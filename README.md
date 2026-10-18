@@ -43,11 +43,11 @@ It contains the byte-verified source programs:
 
 See `code/stageA_original/README.md` for exact input layout, commands and source hashes.
 
-The computational implementation is therefore public. A fresh raw-to-result replay still requires the original third-party data files from their producers; this repository intentionally does not redistribute those raw bytes.
+The computational implementation is therefore public. A fresh raw-to-result replay still requires the original third-party data files from their producers; this repository intentionally does not redistribute those raw bytes. A fresh same-code replay from the producer files was completed on 18 October 2026: the original 25/25 baseline cells were reproduced, four primary output tables were byte-identical to the frozen archive (230 support rows, 150 target-weight rows, 900 transfer rows and 32,400 pair decisions), and the independent output verifier again passed 26/26 checks. See `qa/RAW_TO_RESULT_REPLAY.md`.
 
 ### 3. Deeper frozen-archive audits
 
-The preserved R4 archive additionally passed **188/188** full-campaign workload checks and **5,400/5,400** pair-specific sequential-information checks. Those deeper checks use the SHA-locked author-controlled archive:
+The preserved complete replay archive additionally passed **188/188** full-campaign workload checks and **5,400/5,400** pair-specific sequential-information checks. Those deeper checks use the SHA-locked archive:
 
 `cca1db15a2b76011401099aa128e47d87552093d94248d6a4d5c35e16ff06d1b`
 
