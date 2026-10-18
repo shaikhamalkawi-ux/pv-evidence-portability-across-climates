@@ -24,11 +24,11 @@ Start with:
 
 The public directory contains the exact five-environment replay code, core characterization-depth code, locked-result verifier, Switzerland input manifest and recorded environment. A full raw-to-result execution requires reacquiring the original third-party inputs from the producer repositories listed in `THIRD_PARTY_DATA.md`; raw producer files are not re-hosted here.
 
-The distinction is deliberate: **the analysis code is public; third-party raw data redistribution is not implied.**
+The distinction is deliberate: **the analysis code is public; third-party raw data redistribution is not implied.** The same code was freshly rerun from the project-held producer files on 18 October 2026; the resulting four primary tables were byte-identical to the frozen outputs and the output verifier passed 26/26 checks. See `qa/RAW_TO_RESULT_REPLAY.md` and `qa/FRESH_RAW_TO_RESULT_REPLAY_20261018.json`.
 
 ## Deeper archive checks
 
-The separately preserved SHA-locked R4 archive previously passed **188/188** full-campaign workload checks and **5,400/5,400** sequential-information checks. These are computational verification counts, not independent physical experiments or metrological trials.
+The separately preserved SHA-locked complete replay archive previously passed **188/188** full-campaign workload checks and **5,400/5,400** sequential-information checks. These are computational verification counts, not independent physical experiments or metrological trials.
 
 ## Claim boundaries
 
