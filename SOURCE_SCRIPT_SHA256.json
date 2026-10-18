@@ -3,7 +3,12 @@
   "source_code_sha256_unmodified": {
     "multi_country_stageA_replay.py": "8dc204853e9c763457ed42efd60aabbe528670b3f96bbcf4710a4b7cb7688b97",
     "verify_external_outputs_independent.py": "e9d552f1e17fa7b7caf0de88382abb9949fe78edd48b8423ca5669b4afc6ee33",
-    "build_external_figures.py": "740ee6983f02fede1a3082b27cfc09ad98e9cc50ec1eb85d63ca723cdd534186"
+    "build_external_figures.py": "740ee6983f02fede1a3082b27cfc09ad98e9cc50ec1eb85d63ca723cdd534186",
+    "stageA_original/directional_transfer_5site.py": "79ec83a814a0f665c310d75de42c40471e9491f4ca09f1d54f1ad26b5b8eddc9",
+    "stageA_original/reproduce_characterization_depth.py": "bf1fa4e7d7c8784b0f140ef4f55a412e1a04857409058479ed0585b290fafdff",
+    "stageA_original/verify_r12.py": "26d6cbb6822de3b557bbfd4905510316ee035656dae3028488f537313cac2c7e",
+    "stageA_original/SWITZERLAND_REQUIRED_FILES.csv": "9db4ca92fd426be89794701765042958c182a3971f7c23c806d30fd15ef9b522",
+    "stageA_original/environment.txt": "d72cf2456e41f5e26828f10974fbd222b88a867e8dad946315f806056779d994"
   },
-  "staging_note": "multi_country_stageA_replay.py docstring has project-private Google Doc URL replaced with neutral protocol text; calculation statements are unchanged"
+  "staging_note": "Public repository now includes the recovered original Stage-A replay source. Raw third-party producer files remain excluded."
 }
