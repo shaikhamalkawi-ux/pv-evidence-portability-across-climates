@@ -30,6 +30,12 @@ The distinction is deliberate: **the analysis code is public; third-party raw da
 
 The separately preserved SHA-locked complete replay archive previously passed **188/188** full-campaign workload checks and **5,400/5,400** sequential-information checks. These are computational verification counts, not independent physical experiments or metrological trials.
 
+## Separate support-geometry reproducibility package (Solar Compass MR4)
+
+Supplementary Table S7 has an additional author-provided reviewer ZIP, `SolarCompass_TableS7_Reviewer_Code_And_Derived_Data_NoRaw.zip`, to be uploaded as a separate journal supplemental file. It contains `support_exclusion_audit.py`, the fixed 27-node grid, the frozen support-gate registry, 40-target derived geometry outcomes, manifests, a replay verifier, and source acquisition notes. It does **not** redistribute producer-owned logger files, and it is **not** part of this public repository's derived-only replay script. Reviewers should use the manuscript supplemental upload, not assume that S7 can be reproduced from this GitHub checkout alone.
+
+The current manuscript is a 31 October 2026 **Solar Compass** author-review candidate, not an IEEE OJIM submission or a published article. MR4 adds clear source-verified chronological deployment limitations for Cocoa and Eugene and explicit within-grid conditioning; it makes no new calculation or experimental validation claim. The frozen reproducibility-code snapshot cited by MR4 is `9a8dea54c5ec266d7d3c995fc73b61bb08f5bc60`.
+
 ## Claim boundaries
 
 This repository does not provide a certified measurement-uncertainty budget, measured laboratory-time savings, a universal characterization subset or a universal procurement rule. Stage A concerns source-sequence/target-support transport; Stage B concerns shortlist exclusion. Keep those endpoints separate.
