@@ -7,7 +7,7 @@ It is not a measurement-uncertainty certificate, optimizer or empirical validati
 Uses the standard library; fraction arithmetic preserves exact threshold equality.
 """
 from __future__ import annotations
-import argparse, csv, json, sys
+import argparse, csv, json, os, sys, tempfile
 from fractions import Fraction
 from pathlib import Path
 
@@ -21,27 +21,35 @@ def positive(value: str, label: str) -> Fraction:
     return result
 
 def load(path: Path, source: str, target: str, exclude: set[str]):
-    if source == target:
-        raise ValueError('Source and target must be different named columns.')
+    if source == target or 'module' in (source, target):
+        raise ValueError('Source and target must be distinct endpoint columns, not module.')
     with path.open(newline='', encoding='utf-8-sig') as stream:
-        reader=csv.DictReader(stream)
-        if not reader.fieldnames or len(set(reader.fieldnames)) != len(reader.fieldnames):
-            raise ValueError('Missing or duplicate CSV column names.')
-        if not {'module', source, target}.issubset(reader.fieldnames):
+        reader = csv.reader(stream, strict=True)
+        headers = next(reader, None)
+        if (not headers or any(not name or name != name.strip() for name in headers)
+                or len(set(headers)) != len(headers)):
+            raise ValueError('Missing, blank, padded or duplicate CSV column names.')
+        if not {'module', source, target}.issubset(headers):
             raise ValueError('CSV must contain module plus both site columns.')
-        result={}; seen=set()
-        for row in reader:
-            name=(row.get('module') or '').strip()
+        result = {}; seen = set()
+        for values in reader:
+            if not values:  # Ignore empty physical lines, as csv.DictReader did.
+                continue
+            if len(values) != len(headers):
+                raise ValueError(f'CSV record ending on line {reader.line_num} has '
+                                 f'{len(values)} fields; expected {len(headers)}.')
+            row = dict(zip(headers, values))
+            name = row['module'].strip()
             if not name or name in seen:
                 raise ValueError('Blank or duplicate module identifier.')
             seen.add(name)
-            a=positive(row.get(source), f'{name}/{source}')
-            b=positive(row.get(target), f'{name}/{target}')
+            a = positive(row[source], f'{name}/{source}')
+            b = positive(row[target], f'{name}/{target}')
             if name not in exclude:
-                result[name]=(a,b)
-        unknown=exclude-seen
+                result[name] = (a, b)
+        unknown = exclude - seen
         if unknown:
-            raise ValueError('Excluded identifiers absent from input: '+', '.join(sorted(unknown)))
+            raise ValueError('Excluded identifiers absent from input: ' + ', '.join(sorted(unknown)))
         if not result:
             raise ValueError('No modules remain in the declared cohort.')
     return result
@@ -72,6 +80,35 @@ def evaluate(data: dict[str, tuple[Fraction,Fraction]], q: Fraction):
         'deficits':{n:{'source_pct':float(d[0]),'target_pct':float(d[1])} for n,d in sorted(deficits.items())},
         'interpretation':'nominal point-estimate set comparison; no uncertainty-calibrated guarantee'}
 
+def protect_input_path(source: Path, output: Path) -> None:
+    """Refuse path aliases that would replace the caller's input file."""
+    if source.resolve() == output.resolve():
+        raise ValueError('Output must be a different file from input.')
+    if source.exists() and output.exists() and source.samefile(output):
+        raise ValueError('Output is a filesystem alias of input.')
+    if output.is_symlink():
+        raise ValueError('Output must not be a symbolic link.')
+
+
+def write_json_atomic(output: Path, result: dict) -> None:
+    """Serialize before writing, then replace only the intended result file."""
+    text = json.dumps(result, indent=2, allow_nan=False) + '\n'
+    output.parent.mkdir(parents=True, exist_ok=True)
+    temporary = None
+    try:
+        with tempfile.NamedTemporaryFile(mode='w', encoding='utf-8', newline='\n',
+                                         dir=output.parent, prefix='.shortlist-',
+                                         suffix='.tmp', delete=False) as stream:
+            temporary = Path(stream.name)
+            stream.write(text)
+            stream.flush()
+            os.fsync(stream.fileno())
+        os.replace(temporary, output)
+    finally:
+        if temporary is not None:
+            temporary.unlink(missing_ok=True)
+
+
 def main():
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('--input',type=Path,required=True)
@@ -80,14 +117,15 @@ def main():
     p.add_argument('--exclude',action='append',default=[],help='Repeat for each explicitly excluded module.')
     p.add_argument('--output',type=Path,required=True)
     a=p.parse_args()
+    protect_input_path(a.input, a.output)
     try:q=Fraction(a.q)
     except (ValueError,ZeroDivisionError) as exc:raise ValueError('q must be a finite number.') from exc
     r=evaluate(load(a.input,a.source,a.target,set(a.exclude)),q)
     r.update(source=a.source,target=a.target,excluded_modules=sorted(set(a.exclude)))
-    a.output.parent.mkdir(parents=True,exist_ok=True)
-    a.output.write_text(json.dumps(r,indent=2)+'\n',encoding='utf8')
+    protect_input_path(a.input, a.output)
+    write_json_atomic(a.output, r)
     print(f'{a.source} -> {a.target}: {r["false_exclusion_count"]}/{r["target_retained_count"]} nominal exclusions')
 if __name__=='__main__':
     try:main()
-    except (ValueError,OSError) as e:
+    except (ValueError,OSError,csv.Error,UnicodeError,OverflowError) as e:
         print(f'INPUT REJECTED: {e}',file=sys.stderr);raise SystemExit(2)
