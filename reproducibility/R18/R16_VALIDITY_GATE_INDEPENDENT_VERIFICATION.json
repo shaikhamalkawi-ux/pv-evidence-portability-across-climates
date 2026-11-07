@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "input_rows": 190,
+  "complete_all_pairs": 188,
+  "correct_winner_and_complete_all_pairs": 184,
+  "incorrect_winner_complete_all_pairs": 4,
+  "winner_correct_but_incomplete_all_pairs": 2,
+  "raw_strict_task_reversals": 16,
+  "incorrect_winner_apparent_reversals": 4,
+  "validity_gated_strict_reversals": 12,
+  "unique_wrong_target": "2019_System_2B",
+  "wrong_sources": [
+    "Cocoa",
+    "Golden",
+    "Switzerland",
+    "Albuquerque"
+  ],
+  "crosstab_valid": {
+    "better": {
+      "better": 59,
+      "same": 17,
+      "worse": 3
+    },
+    "same": {
+      "better": 2,
+      "same": 0,
+      "worse": 0
+    },
+    "worse": {
+      "better": 9,
+      "same": 25,
+      "worse": 69
+    }
+  },
+  "m2_identity_check": "PASS",
+  "interpretation": "Retrospective full-reference gate only, not a prospective decision-risk certificate"
+}

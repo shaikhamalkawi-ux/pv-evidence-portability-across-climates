@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "input_rows": 190,
+  "complete_pairs": 188,
+  "correct_complete": 184,
+  "raw_reversals": 16,
+  "incorrect_apparent_reversals": 4,
+  "valid_reversals": 12,
+  "distinct_targets": 11,
+  "source_family_breakdown": {
+    "Brazil": 9,
+    "Germany": 2,
+    "Italy": 1
+  },
+  "one_cell_absolute_winner_depth": 9,
+  "all_abs_pair_mean_percent_lt_5": true,
+  "max_abs_pair_mean_percent": "4.861111111111116",
+  "source_sha256": {
+    "R16_COMPLETE_VALIDITY_GATED_CENSUS.csv": "4d38fc47e699cc8a1f461d9bc8350e83939a6825722cdf0cda1e02633e51bd4b",
+    "R16_FROZEN_R15_TASK_COMPARISONS_PRIMARY38.csv": "45060d415faa8ed84f5b1212a36893e2401913616031deddf73e244d43bb3c9d"
+  },
+  "notes": "Finite, dependent, retrospective replays; not independent site or population inference."
+}

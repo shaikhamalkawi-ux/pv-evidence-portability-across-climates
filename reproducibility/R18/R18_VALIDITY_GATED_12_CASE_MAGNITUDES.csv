@@ -1,0 +1,13 @@
+source_family,target_id,source_order,delta_pair_mean_percent,delta_winner_depth_cells,delta_K_all_cells,delta_N_mod_cell,winner_correct,all_pairs_complete
+Germany,2018_System_1,Golden,1.7021276595744705,-1.0,-1.0,2.0,True,True
+Germany,2019_System_2B,Eugene,3.759398496240607,-1.0,0.0,8.0,True,True
+Italy,D24_Trieste_inv1_tpan,Cocoa,4.861111111111116,-6.0,3.0,7.0,True,True
+Brazil,D09_PS_006,Albuquerque,-1.4981273408239737,2.0,1.0,9.0,True,True
+Brazil,D09_PS_008,Switzerland,2.614379084967311,-1.0,0.0,10.0,True,True
+Brazil,D09_PS_008,Albuquerque,0.9803921568627416,-2.0,2.0,18.0,True,True
+Brazil,D09_PS_010,Cocoa,3.5211267605633756,-1.0,3.0,20.0,True,True
+Brazil,D09_PS_034,Albuquerque,4.827586206896561,-1.0,6.0,22.0,True,True
+Brazil,D09_PS_037,Cocoa,1.2345679012345734,-1.0,2.0,8.0,True,True
+Brazil,D09_PS_043,Golden,-3.802281368821292,1.0,-1.0,-8.0,True,True
+Brazil,D09_PS_049,Cocoa,1.9305019305019266,-1.0,-1.0,10.0,True,True
+Brazil,D09_PS_050,Cocoa,-2.343749999999989,1.0,-3.0,-12.0,True,True
