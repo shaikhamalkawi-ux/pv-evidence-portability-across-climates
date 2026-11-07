@@ -58,7 +58,7 @@ def make_plot(input_path: Path, output_path: Path) -> None:
     zoom.set_title('(b) Magnified region near zero mean change',loc='left',fontweight='semibold')
     handles=[Line2D([],[],marker='o',linestyle='',markersize=5,markerfacecolor='#548bb8',markeredgecolor='white',label='No strict reversal'),
              Line2D([],[],marker='o',linestyle='',markersize=7,markerfacecolor='white',markeredgecolor='#1b1b1b',label='Strict task reversal (12 runs)')]
-    fig.legend(handles=handles,loc='lower center',bbox_to_anchor=(.5,-.012),ncol=2,frameon=False)
+    fig.legend(handles=handles,loc='lower center',bbox_to_anchor=(.5,-.085),ncol=2,frameon=False)
     output_path.parent.mkdir(parents=True,exist_ok=True)
     fig.savefig(output_path,bbox_inches='tight',pad_inches=.16)
     plt.close(fig)
