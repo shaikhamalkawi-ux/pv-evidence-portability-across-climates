@@ -1,8 +1,10 @@
 > **Current public review update (8 November 2026):** Reproducibility materials for the R18 validity-gated task-reversal audit are in [reproducibility/R18](reproducibility/R18), with a reproducible, source-hash-gated magnified figure in [figures/R19](figures/R19). The underlying 190-row decision ledger and 12-case table are derived records, not third-party raw PV measurements or an independent prospective experiment. These public files do not establish measured lab-time savings or a calibrated risk bound. The manuscript's MDPI-specific author-review template is kept outside this public repository. The complete **journal-neutral R19 working manuscript and supplement PDFs**, plus a source ZIP without the publisher template, are now in [preprint/](preprint/). These PDFs are not accepted journal articles.\n\n# PV Evidence Portability Across Climates
 
-**Code and derived-result companion** to the Global Solar research manuscript:
+**Code and derived-result companion** to the current Project 66 working manuscript:
 
-*Directional Portability of PV Characterization Sequences: Measurement Burden and Shortlist Exclusion Across Climates*
+*Decision-Task Portability of PV Characterization Sequences: A Retrospective Cross-Climate Audit*
+
+Historical archive title (preserved for provenance): *Directional Portability of PV Characterization Sequences: Measurement Burden and Shortlist Exclusion Across Climates*.
 
 **Repository maintainer and GitHub code-archive contact: Ghassan Malkawi** (sole maintainer). Journal-manuscript authorship is recorded in the paper separately; repository maintenance is not the manuscript byline. No final journal DOI exists, and this repository is not evidence of journal acceptance.
 
