@@ -1,0 +1,29 @@
+{
+  "table_blocks_unchanged": true,
+  "table_block_count": 5,
+  "equation_blocks_unchanged": true,
+  "equation_block_count": 12,
+  "align_blocks_unchanged": true,
+  "align_block_count": 0,
+  "tabular_blocks_unchanged": true,
+  "tabular_block_count": 3,
+  "supp_table_blocks_unchanged": true,
+  "supp_equation_blocks_unchanged": true,
+  "supp_tabular_blocks_unchanged": true,
+  "unchanged_figure_assets_sha_match": 4,
+  "references_cited": 39,
+  "title": "Decision-Task Portability of PV Characterization Sequences: A Retrospective Cross-Climate Audit",
+  "git_repro_sha": "cb42962c6544a5f9afb4e69d39682799cf932370",
+  "pdf_pages": {
+    "mdpi_main": 21,
+    "mdpi_supplement": 14,
+    "public_neutral_main": 24,
+    "public_neutral_supplement": 14
+  },
+  "private_mdpi_manuscript_clean_text_parity": 21,
+  "private_mdpi_supplement_clean_text_parity": 14,
+  "public_neutral_manuscript_neutral_clean_text_parity": 24,
+  "public_neutral_supplement_clean_text_parity": 14,
+  "frozen_ledgers_byte_identical": 3,
+  "status": "PASS"
+}
