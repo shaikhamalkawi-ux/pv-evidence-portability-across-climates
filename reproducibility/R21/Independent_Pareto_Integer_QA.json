@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "source": "R15 32400 pair records; exact integer depth arithmetic",
+  "eligible_target_order_records": 222,
+  "eligible_historical": 184,
+  "pareto_nondominated_records": 74,
+  "targets_with_multiple_distinct_tradeoff_options": 23,
+  "targets_with_local_dominated": 16,
+  "local_non_dominated": 22,
+  "targets_with_front_sizes": {
+    "1": 15,
+    "2": 12,
+    "3": 9,
+    "4": 2
+  }
+}

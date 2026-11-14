@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "source_pair_rows": 32400,
+  "source_all_target_order_groups": 900,
+  "audited_primary_order_records": 228,
+  "complete_correct": 222,
+  "complete_incorrect": 4,
+  "incomplete_correct": 2,
+  "primary_target_count": 38,
+  "all_recomputed_metric_checks": "PASS",
+  "raw_physical_validation": false
+}
