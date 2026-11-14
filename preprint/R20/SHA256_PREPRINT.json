@@ -1,0 +1,23 @@
+{
+  "status": "AUTHOR_REVIEW",
+  "publisher_mdpi_template_included": false,
+  "source_r20_analysis_commit": "c7455d83f0d84738c55c265ab53feaf526ccb8de",
+  "files": {
+    "JournalNeutral_R20_Source.zip": {
+      "bytes": 252833,
+      "sha256": "c4b3b5a170561d5bde4fdc83f9bd4152c72bdc2d2baca713335b468fbcd851e4"
+    },
+    "Manuscript_R20_JournalNeutral_WORKING_DRAFT.pdf": {
+      "bytes": 470283,
+      "sha256": "db02e26ce51b7eceeedd4ddca6c08bf3fbd816a64bedc9b5abdfaceb8b6b58e9"
+    },
+    "README.md": {
+      "bytes": 1878,
+      "sha256": "d3ef3542b0c72f50cc0b3df5a2a7ab0e0ffc38c0a1e883a2329a4f4aa36058de"
+    },
+    "Supplement_R20_JournalNeutral_WORKING_DRAFT.pdf": {
+      "bytes": 633737,
+      "sha256": "2eba592ae94c33111f6a3c2d30aeec0555353ca9b0f45476af01121b99d9a79f"
+    }
+  }
+}

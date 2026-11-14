@@ -81,3 +81,6 @@ bash stageA_derived_audit/verify_all.sh /absolute/path/to/Project62_R4_Multicoun
 No original NREL, Sandia, IEA, Zenodo, Mendeley or other producer logger data are redistributed here. Obtain them from the cited sources and comply with their licences. The field records provide operating-state distributions; they are not new field measurements of the nine response-panel products.
 
 The empirical stopping envelope is not a calibrated measurement-uncertainty budget, the workload proxies are not measured laboratory time, and no universal safe sequence, error probability or procurement rule is claimed.
+
+
+The **R20 journal-neutral working PDFs and editable LaTeX** are publicly readable in [preprint/R20](preprint/R20), separately from the author-review MDPI template. This is not a peer-reviewed or accepted paper.
