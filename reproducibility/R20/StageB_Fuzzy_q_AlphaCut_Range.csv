@@ -1,0 +1,7 @@
+alpha,q_low,q_high,minimum_nominal_false_exclusions,maximum_nominal_false_exclusions
+0,4.5,5.5,2,4
+0.25,4.625,5.375,2,4
+0.5,4.75,5.25,2,3
+0.75,4.875,5.125,2,3
+0.9,4.95,5.05,3,3
+1,5.0,5.0,3,3

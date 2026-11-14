@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "scope": "derived-only computational independence, not field-data verification",
+  "stageA_rows": 79,
+  "stageA_alpha_cases": 1422,
+  "stageA_fuzzy_modal_scenarios": 3,
+  "stageB_physical_units": 11,
+  "stageB_q5_count": 3,
+  "stageB_qsupport_min_max": [
+    2,
+    4
+  ],
+  "third_party_raw_redistributed": false
+}
